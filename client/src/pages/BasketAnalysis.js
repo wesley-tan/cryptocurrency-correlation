@@ -180,9 +180,7 @@ function BasketAnalysis() {
                   <button 
                     className="remove-token"
                     onClick={() => removeFromBasket(1, token.id)}
-                  >
-                    ×
-                  </button>
+                  > × </button>
                 </div>
               ))}
               <button 
@@ -290,9 +288,9 @@ function BasketAnalysis() {
           </div>
           
           <button 
-            onClick={analyzeBasketCorrelation} 
+            className="analyze-button"
+            onClick={analyzeBasketCorrelation}
             disabled={loading || basket1.length === 0 || basket2.length === 0}
-            className="analyze-btn"
           >
             {loading ? 'Analyzing...' : 'Analyze Basket Correlation'}
           </button>

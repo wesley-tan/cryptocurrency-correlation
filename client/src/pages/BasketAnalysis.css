@@ -262,59 +262,25 @@ h2::after {
   }
 }
 
-.analyze-btn {
-  background-color: var(--primary-color);
+.analyze-button {
+  background-color: #1a237e;
   color: white;
-  padding: 12px 25px;
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  min-width: 220px;
-  border: 2px solid transparent;
-  cursor: pointer;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
   font-size: 16px;
-  height: 48px;
-  line-height: 20px;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-  transition: background-color 0.2s, box-shadow 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.analyze-btn::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 5px;
-  height: 5px;
-  background: rgba(255, 255, 255, 0.5);
-  opacity: 0;
-  border-radius: 100%;
-  transform: scale(1, 1) translate(-50%);
-  transform-origin: 50% 50%;
+.analyze-button:hover {
+  background-color: #283593;
 }
 
-.analyze-btn:focus:not(:active)::after {
-  animation: ripple 1s ease-out;
-}
-
-.analyze-btn:hover {
-  background-color: var(--primary-light);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.analyze-btn:active {
-  background-color: var(--primary-dark);
-  border-color: transparent;
-}
-
-.analyze-btn:disabled {
-  background-color: #cccccc;
+.analyze-button:disabled {
+  background-color: #9fa8da;
   cursor: not-allowed;
-  box-shadow: none;
-  border-color: transparent;
-  opacity: 0.7;
 }
 
 .results {
