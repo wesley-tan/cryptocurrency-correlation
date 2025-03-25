@@ -108,7 +108,7 @@ function BasketAnalysis() {
     setCorrelation(null);
     
     try {
-      const response = await axios.post('http://localhost:8000/api/basket-correlation', {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL || 'http://localhost:8000'}/api/basket-correlation`, {
         basket1: basket1.map(token => token.id),
         basket2: basket2.map(token => token.id),
         days
